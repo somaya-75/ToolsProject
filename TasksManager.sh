@@ -23,6 +23,19 @@ add_task() {
 
 # function 2      ruyuf        id
 
+#!/bin/bash
+
+# Function to list tasks from tasks.txt
+list_tasks() {
+  if [[ ! -f tasks.txt ]]; then
+    echo "Error: tasks.txt not found!"
+    return 1
+  fi
+  cat tasks.txt
+}
+
+# Call the function
+list_tasks
 
 
 
